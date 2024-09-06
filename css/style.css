@@ -12,17 +12,13 @@ body {
     align-items: center;
     justify-content: center;
     background-color: gray;
+    padding: 0 10px;
 }
-
+    
 .title {
     margin-top: 30px;
     color: white;
     font-size: 50px;
-}
-
-img {
-    width: 189.5px;
-    height: 410px;
 }
 
 .game-board {
@@ -37,11 +33,16 @@ img {
     max-height: 900px;
 }
 
+.spaceman-image img {
+    width: 189.5px;
+    height: 410px;
+}
+
 .rest-of-game {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    font-size: 25px;
+    font-size: 1.5rem;
     align-items: center;
 }
 
@@ -51,11 +52,14 @@ img {
 
 .target-word {
     display: flex;
-    /* justify-content: center; */
-    font-size: 25px;
-    font-weight: bold;
     gap: 12px;
     list-style-type: none;
+    text-transform: capitalize;
+}
+
+.letter {
+    width: 25px;
+    border-bottom: 4px solid black;
 }
 
 .incorrect-guesses b {
@@ -77,5 +81,81 @@ img {
     border-radius: 4px;
     background-color: gray;
     padding: 7px;
-    border: none;
+    text-transform: capitalize;
+}
+
+.keyboard button:hover {
+    background-color: lightgray;
+}
+
+.keyboard button[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.game-result {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-result.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.game-result-display {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.25rem;
+    width: 760px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.game-result-display img {
+    width: 200px;
+    height: 390px;
+    margin-bottom: 20px;
+}
+
+.game-result-display .button {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background-color: gray;
+}
+
+.game-result-display .button:hover {
+    background-color: lightgray;
+}
+@media (max-width: 785px) {
+    .game-board {
+        flex-direction: column;
+        padding: 40px 20px;
+        align-items: center;
+    }
+    .spaceman-image {
+        max-width: 200px;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
 }

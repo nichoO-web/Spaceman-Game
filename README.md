@@ -7,7 +7,7 @@ In this version of the game, the word will be selected by the computer, as well 
 
 # Getting Started:
 
-Click [here](insert link here) to check out this game! You can also take a look at the plaaning materials for this game by clicking [here](https://docs.google.com/document/d/193qK14VNpQMiLG1zH61CL4j3eeN1zIN2LxeLzIsaVoE/edit).
+Click [here](https://nichoo-web.github.io/Spaceman-game/) to check out this game! You can also take a look at the plaaning materials for this game by clicking [here](https://docs.google.com/document/d/193qK14VNpQMiLG1zH61CL4j3eeN1zIN2LxeLzIsaVoE/edit).
 
 # Attributions:
 

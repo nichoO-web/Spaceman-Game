@@ -176,14 +176,35 @@ const init = (keys, clickedButton) => {
     } else {
         wrongGuesses++;
         wrongGuessCount.textContent = `${wrongGuesses} / ${maxGuesses}`;
-        spacemanImage.src = `file:///Users/nichootero/Downloads/Spaceman/Untitled_Artwork-${wrongGuesses}.jpg`;
+        if (wrongGuesses === 0) {
+            spacemanImage.src = 'https://i.imgur.com/k7Uo9ka.jpeg';
+        } else if (wrongGuesses === 1){
+            spacemanImage.src = 'https://i.imgur.com/kXLQocC.jpeg';
+        } else if (wrongGuesses === 2){
+            spacemanImage.src = 'https://i.imgur.com/mpstfrU.jpeg';
+        } else if (wrongGuesses === 3){
+            spacemanImage.src = 'https://i.imgur.com/dCPhQAL.jpeg';
+        } else if (wrongGuesses === 4){
+            spacemanImage.src = 'https://i.imgur.com/VVSFanD.jpeg';
+        } else if (wrongGuesses === 5){
+            spacemanImage.src = 'https://i.imgur.com/fLWdjTr.jpeg';
+        } else if (wrongGuesses === 6){
+            spacemanImage.src = 'https://i.imgur.com/3iAuQkV.jpeg';
+        } else if (wrongGuesses === 7){
+            spacemanImage.src = 'https://i.imgur.com/NQHNGnJ.jpeg';
+        } else if (wrongGuesses === 8){
+            spacemanImage.src = 'https://i.imgur.com/T5zOJzp.jpeg';
+        } else if (wrongGuesses === 9){
+            spacemanImage.src = 'https://i.imgur.com/lKYbaCA.jpeg';
+        }
     }
     keys.disabled = true;
     if (wrongGuesses === maxGuesses) {
         return winOrLose(false);
-    } else if(correctGuesses.length === currentTargetWord.length) {
+    } else if (correctGuesses.length === currentTargetWord.length) {
         return winOrLose(true);
     }
+
 }
 
 wrongGuessCount.textContent = `${wrongGuesses} / ${maxGuesses}`;
@@ -191,10 +212,10 @@ wrongGuessCount.textContent = `${wrongGuesses} / ${maxGuesses}`;
 const winOrLose = (win) => {
     gameResult.classList.add('show');
     if (win === true) {
-        gameResultImage.src = `file:///Users/nichootero/Downloads/Spaceman/Untitled_Artwork%201.GIF`;
+        gameResultImage.src = `https://i.imgur.com/p5LIYIB.gif`;
         gameResultText.innerText = 'You got the word!';
     } else {
-        gameResultImage.src = `file:///Users/nichootero/Downloads/Spaceman/Untitled_Artwork%202.GIF`;
+        gameResultImage.src = `https://live.staticflickr.com/65535/53976303724_552e6a82e6_w.jpg`;
         gameResultText.innerText = `The correct word was : ${currentTargetWord}`;
     }
 }
@@ -205,7 +226,27 @@ const reset = () => {
     correctGuesses = [];
     gameResult.classList.remove('show');
     wrongGuessCount.textContent = `${wrongGuesses} / ${maxGuesses}`;
-    spacemanImage.src = `file:///Users/nichootero/Downloads/Spaceman/Untitled_Artwork-${wrongGuesses}.jpg`;
+    if (wrongGuesses === 0) {
+        spacemanImage.src = 'https://i.imgur.com/k7Uo9ka.jpeg';
+    } else if (wrongGuesses === 1){
+        spacemanImage.src = 'https://i.imgur.com/kXLQocC.jpeg';
+    } else if (wrongGuesses === 2){
+        spacemanImage.src = 'https://i.imgur.com/mpstfrU.jpeg';
+    } else if (wrongGuesses === 3){
+        spacemanImage.src = 'https://i.imgur.com/dCPhQAL.jpeg';
+    } else if (wrongGuesses === 4){
+        spacemanImage.src = 'https://i.imgur.com/VVSFanD.jpeg';
+    } else if (wrongGuesses === 5){
+        spacemanImage.src = 'https://i.imgur.com/fLWdjTr.jpeg';
+    } else if (wrongGuesses === 6){
+        spacemanImage.src = 'https://i.imgur.com/3iAuQkV.jpeg';
+    } else if (wrongGuesses === 7){
+        spacemanImage.src = 'https://i.imgur.com/NQHNGnJ.jpeg';
+    } else if (wrongGuesses === 8){
+        spacemanImage.src = 'https://i.imgur.com/T5zOJzp.jpeg';
+    } else if (wrongGuesses === 9){
+        spacemanImage.src = 'https://i.imgur.com/lKYbaCA.jpeg';
+    };
     targetWord.innerHTML = currentTargetWord.split('').map(() => `<li class="letter"></li>`).join('');
     randomWord()
 }

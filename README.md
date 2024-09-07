@@ -13,6 +13,7 @@ Click [here](https://nichoo-web.github.io/Spaceman-game/) to check out this game
 
 * [MDN](https://developer.mozilla.org/en-US/)
 * [ChatGPT](https://openai.com/chatgpt/) (**ONLY USED TO GENERATE WORD LIST**)
+* [Imgur](https://imgur.com/)
 
 # Technologies Used:
 
